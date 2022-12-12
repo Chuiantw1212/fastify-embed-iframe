@@ -16,7 +16,9 @@ fastify.get('/', function (request, reply) {
 })
 
 // Run the server!
-fastify.listen({ port: 3000 }, function (err, address) {
+// Listen to the App Engine-specified port, or 8080 otherwise
+const PORT = process.env.PORT || 8080;
+fastify.listen({ port: PORT }, function (err, address) {
     if (err) {
         fastify.log.error(err)
         process.exit(1)
