@@ -14,6 +14,13 @@ fastify.get('/', function (request, reply) {
     const stream = fs.createReadStream(resolvedPath)
     reply.type('text/html').send(stream)
 })
+fastify.post('/submit', (req, res) => {
+    console.log({
+        name: req.body.name,
+        message: req.body.message
+    });
+    res.send('Thanks for your message!');
+});
 
 // Run the server!
 // Listen to the App Engine-specified port, or 8080 otherwise
