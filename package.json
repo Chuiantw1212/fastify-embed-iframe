@@ -1,0 +1,24 @@
+{
+  "name": "fastify-embed-iframe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chuiantw1212/fastify-embed-iframe.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Chuiantw1212/fastify-embed-iframe/issues"
+  },
+  "homepage": "https://github.com/Chuiantw1212/fastify-embed-iframe#readme",
+  "dependencies": {
+    "fastify": "^4.10.2"
+  }
+}
