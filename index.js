@@ -1,7 +1,6 @@
 // Require the framework and instantiate it
 const path = require('path')
 const fs = require('fs')
-
 // ESM
 const Fastify = require('fastify')
 const fastify = Fastify({
@@ -9,6 +8,7 @@ const fastify = Fastify({
 })
 
 // Declare a route
+fastify.register(require('@fastify/formbody'))
 fastify.get('/', function (request, reply) {
     const resolvedPath = path.join(__dirname, 'index.html')
     const stream = fs.createReadStream(resolvedPath)
@@ -19,7 +19,8 @@ fastify.post('/submit', (req, res) => {
         name: req.body.name,
         message: req.body.message
     });
-    res.send('Thanks for your message!');
+    res.redirect('https://stackoverflow.com/')
+    // res.send('Thanks for your message!');
 });
 
 // Run the server!

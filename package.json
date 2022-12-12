@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/Chuiantw1212/fastify-embed-iframe#readme",
   "dependencies": {
+    "@fastify/formbody": "^7.4.0",
     "fastify": "^4.10.2"
   }
 }
